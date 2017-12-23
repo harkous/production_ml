@@ -1,0 +1,12 @@
+[Unit]
+Description=uWSGI instance to serve production_ml service
+
+[Service]
+User=harkous
+Group=harkous
+WorkingDirectory=/home/harkous/Development/production_ml/
+ExecStart=/home/harkous/anaconda3/envs/production_ml_env/bin/uwsgi --ini /home/harkous/Development/production_ml/uwsgi.ini
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

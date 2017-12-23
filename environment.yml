@@ -1,0 +1,12 @@
+name: production_ml_env
+channels:
+  - conda-forge
+dependencies:
+- python=3.6
+- keras
+- flask
+- uwsgi
+- numpy
+- pip
+- pip:
+  - uwsgitop

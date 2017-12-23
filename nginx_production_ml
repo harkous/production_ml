@@ -1,0 +1,11 @@
+server {
+    listen 4444;
+    # change this to your server name or IP
+    server_name YOUR_SERVER_NAME_OR_IP;
+
+    location / {
+        include         uwsgi_params;
+        # change this to the location of the uWSGI socket file (set in uwsgi.ini)
+        uwsgi_pass      unix:/home/harkous/Development/production_ml/production_ml.sock;
+    }
+}
